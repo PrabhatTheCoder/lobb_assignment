@@ -8,7 +8,6 @@ from .utils import encode_base62
 from snowflake import SnowflakeGenerator
 from django.shortcuts import redirect
 generator = SnowflakeGenerator(1)   # I can pass machine id here
-from django.views.generic import TemplateView
 
 class ShortenView(APIView):
     def post(self, request):
