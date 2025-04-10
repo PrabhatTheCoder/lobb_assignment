@@ -88,12 +88,15 @@ env = environ.Env()
 environ.Env.read_env() 
 
 
+import os
+import urllib.parse
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'QiJ6ukJoUlnv0Gwq',
+        'USER': 'postgres.whutqfyerbenrjlzzcfp',
+        'PASSWORD': 'idlXOMu0bJRp8kxo',
         'HOST': 'aws-0-ap-south-1.pooler.supabase.com',
         'PORT': '6543',
         'OPTIONS': {
@@ -101,6 +104,9 @@ DATABASES = {
         },
     }
 }
+
+
+
 
 
 
