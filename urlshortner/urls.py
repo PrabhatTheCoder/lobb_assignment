@@ -1,5 +1,5 @@
 from django.urls import path,include
-from .views import ShortenView, RedirectView, ListUrlView, HomeView
+from .views import ShortenView, RedirectView, ListUrlView
 
 urlpatterns = [
     path('shorten/', ShortenView.as_view(), name='shorten-url'),
