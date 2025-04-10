@@ -20,7 +20,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "lobb_assingment/wsgi.py"
+        "dest": "lobb_assignment/wsgi.py"
       }
     ]
   }

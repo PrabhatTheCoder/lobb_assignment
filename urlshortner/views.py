@@ -8,6 +8,12 @@ from .utils import encode_base62
 from snowflake import SnowflakeGenerator
 from django.shortcuts import redirect
 generator = SnowflakeGenerator(1)   # I can pass machine id here
+from django.views.generic import TemplateView
+
+
+
+class HomeView(TemplateView):
+    template_name = "index.html"
 
 class ShortenView(APIView):
     def post(self, request):
@@ -33,6 +39,6 @@ class RedirectView(APIView):
 class ListUrlView(APIView):
     
     def get(self, *args, **kwargs):
-        queryset = ShortURL.objects.all()
+        queryset = ShortURL.objects.all().order_by('-created_at')
         serializer = ShortURLSerializer(queryset, many = True)
         return Response(serializer.data, status=status.HTTP_200_OK)
