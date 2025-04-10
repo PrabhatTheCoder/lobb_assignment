@@ -21,7 +21,7 @@ class ShortenView(APIView):
                 original_url=original_url
             )
             return Response({
-                "short_url": f"http://localhost:8000/{short_code}"
+                "short_url": f"https://lobb-assignment.vercel.app/{short_code}"
             })
         return Response(serializer.errors, status=400)
 
