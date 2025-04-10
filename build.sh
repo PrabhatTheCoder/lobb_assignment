@@ -24,8 +24,8 @@ echo "Verifying Django installation..."
 python3.9 -c "import django; print(django.get_version())"
 
 # Collect static files
-# echo "Collecting static files..."
-# python3.9 manage.py collectstatic --noinput --clear -c
+echo "Collecting static files..."
+python3.9 manage.py collectstatic --noinput --clear -c
 
 # Make migrations (this step creates migration files)
 echo "Making migrations..."
