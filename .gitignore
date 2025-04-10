@@ -2,3 +2,7 @@
 bin/
 lib/
 *.sqlite3/home/prabhat/Desktop/vozier_assignment/.gitignore
+
+# Ignore Django migration files
+**/migrations/
+!**/migrations/__init__.py

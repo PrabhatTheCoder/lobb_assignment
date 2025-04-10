@@ -4,13 +4,6 @@
       {
         "src": "lobb_assignment/wsgi.py",
         "use": "@vercel/python"
-      },
-      {
-        "src": "build.sh",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "staticfiles_build" 
-        }
       }
     ],
     "routes": [
@@ -20,7 +13,8 @@
       },
       {
         "src": "/(.*)",
-        "dest": "lobb_assingment/wsgi.py"
+        "dest": "lobb_assignment/wsgi.py"
       }
     ]
   }
+  
