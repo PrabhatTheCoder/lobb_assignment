@@ -10,11 +10,6 @@ from django.shortcuts import redirect
 generator = SnowflakeGenerator(1)   # I can pass machine id here
 from django.views.generic import TemplateView
 
-
-
-class HomeView(TemplateView):
-    template_name = "index.html"
-
 class ShortenView(APIView):
     def post(self, request):
         serializer = ShortenSerializer(data=request.data)
